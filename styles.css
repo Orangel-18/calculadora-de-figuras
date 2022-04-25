@@ -1,0 +1,134 @@
+:root {
+    --this-purple: #691FFF;
+    --medium-purple: #A070FF;
+    --mauve: #C9ADFF;
+    --maximum-blue-purple: #ADB8FF;
+    --lavender-blue: #D6DCFF;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Roboto Slab', serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*  */
+
+body {
+    background-color: var(--this-purple);
+}
+
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media (min-width: 770px) {
+    main {
+        width: 90%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+        margin: 0 auto;
+    }
+
+    .info {
+        margin-bottom: 70px;
+    }
+}
+
+/*  */
+
+.info {
+    align-self: center;
+    text-align: center;
+}
+
+@media (min-width: 770px) {
+    .info {
+        grid-area: 1 / 1 / 2 / 4;
+    }
+}
+
+.square, .triangle, .circle {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 30px 15px;
+    border-radius: 15px;
+    background: #ADB8FF;
+    box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.60);
+}
+
+.square button, .triangle button, .circle button {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color:#C9ADFF;
+    border: solid 0.5px #A070FF;
+}
+
+.square input, .triangle input, .circle input {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #D6DCFF;
+  border: solid 0.5px #A070FF;
+}
+
+@media (min-width: 770px) {
+    .square, .circle {
+        height: 350px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .square, .circle {
+        height: 70%;
+    }
+}
+
+.square{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.triangle{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.circle{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
